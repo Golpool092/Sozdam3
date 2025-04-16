@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MillsLibrary — Цифровая библиотека</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+      color: #1c1c1c;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 44px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #182848;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .featured {
+      background: #ffffff;
+      margin: 40px auto;
+      padding: 40px 20px;
+      max-width: 900px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .featured img {
+      width: 200px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .featured p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    footer {
+      background: #182848;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact {
+      background: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .contact a {
+      color: #182848;
+      font-weight: bold;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .scroll-up {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #4b6cb7;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MillsLibrary</h1>
+    <p>Современная цифровая библиотека знаний и вдохновения</p>
+  </header>
+
+  <nav>
+    <a href="#books">Книги</a>
+    <a href="#featured">Рекомендуем</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Твоя цифровая библиотека</h2>
+    <p>Собрание лучших знаний, книг, статей и материалов по разным направлениям</p>
+  </section>
+
+  <h2 class="section-title" id="books">Категории</h2>
+  <section class="grid">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/book.png" alt="Books" />
+      <h3>Фантастика</h3>
+      <p>Классические и современные романы с захватывающими сюжетами.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/physics.png" alt="Science" />
+      <h3>Наука</h3>
+      <p>Объяснения, эксперименты и открытия на простом языке.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/historical.png" alt="History" />
+      <h3>История</h3>
+      <p>Изучай прошлое, чтобы понять настоящее и построить будущее.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/mental-health.png" alt="Psychology" />
+      <h3>Психология</h3>
+      <p>Изучение человека, мышления, поведения и эмоций.</p>
+    </div>
+  </section>
+
+  <section class="featured" id="featured">
+    <h2>Рекомендуем к прочтению</h2>
+    <img src="https://covers.openlibrary.org/b/id/10521607-L.jpg" alt="1984 Book Cover">
+    <p><strong>1984</strong> — Джордж Оруэлл. Роман-антиутопия, который не теряет актуальности в современном мире.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Хочешь такой сайт?</h2>
+    <p>Создаю профессиональные сайты под ключ — пиши в <a href="https://t.me/MillersonXIII" target="_blank">Telegram: @MillersonXIII</a></p>
+  </section>
+
+  <footer>
+    © 2025 MillsLibrary. Все права защищены.
+  </footer>
+
+  <div class="scroll-up" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
+
+</body>
+</html>
